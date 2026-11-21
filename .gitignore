@@ -1,0 +1,34 @@
+---
+
+### 2. `shoplite-gitops-infra/.gitignore`
+
+```gitignore
+# Terraform local working directory & providers
+**/.terraform/
+.terraform.lock.hcl
+
+# Terraform state & plan files (contain sensitive outputs)
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+!*.tfvars.example
+.env
+.env.*
+!.env.example
+
+# Kubernetes / Helm secrets
+*secret*.yaml
+kubeconfig
+*.kubeconfig
+
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

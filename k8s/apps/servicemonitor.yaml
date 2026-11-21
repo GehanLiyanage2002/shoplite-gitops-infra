@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: shoplite-monitor
+  namespace: shoplite
+  labels:
+    release: monitoring # Must match your kube-prometheus-stack Helm release name
+spec:
+  selector:
+    matchLabels:
+      app: shoplite-api
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
