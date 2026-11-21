@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shoplite-api
-          image: shopliteacr2026.azurecr.io/shoplite-api:initial
+          image: shopliteacr2026.azurecr.io/shoplite-api:7866b07
           ports:
             - name: http
               containerPort: 8080
