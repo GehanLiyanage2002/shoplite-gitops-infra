@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-username>/shoplite-gitops-infra.git
+    repoURL: https://github.com/GehanLiyanage2002/shoplite-gitops-infra.git
     targetRevision: main
     path: k8s/apps
   destination:
